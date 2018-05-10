@@ -2,14 +2,14 @@
 public class Currency {
 
 	private String name;
-	private double price;
+	private double value;
 	private double tax;
 	private double cost;
 	
-	public Currency(String name, double price, double tax, double cost) {
+	public Currency(String name, double value, double tax, double cost) {
 		super();
 		this.name = name;
-		this.price = price;
+		this.value = value;
 		this.tax = tax;
 		this.cost = cost;
 	}
@@ -18,8 +18,8 @@ public class Currency {
 		return name;
 	}
 
-	public double getPrice() {
-		return price;
+	public double getValue() {
+		return value;
 	}
 
 	public double getTax() {

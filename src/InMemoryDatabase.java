@@ -1,15 +1,14 @@
 import java.util.ArrayList;
 import java.util.List;
 
-//poczatkowa baza
 public class InMemoryDatabase {
 
 	private static List<Currency> currencies = new ArrayList<Currency>();
 
 	static {
-		currencies.add(new Currency("GBP", 34.5, 3, 500));
-		currencies.add(new Currency("EUR", 3, 5, 330));
-		currencies.add(new Currency("PLN", 6, 3, 880));
+		currencies.add(new Currency("GBP", 3.56, 25, 600));
+		currencies.add(new Currency("EUR", 4.25, 20, 800));
+		currencies.add(new Currency("PLN", 1, 19, 1200));
 	}
 
 	public static List<Currency> getCurrencies() {
@@ -35,6 +34,10 @@ public class InMemoryDatabase {
 		}
 		return null;
 
+	}
+
+	public static void addCurrency(String name, double price, double tax, double cost) {
+		currencies.add(new Currency(name,price,tax,cost));
 	}
 
 }
